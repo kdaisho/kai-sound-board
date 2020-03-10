@@ -1,0 +1,150 @@
+/* ========== Reset Styles =========== */
+/* http://meyerweb.com/eric/tools/css/reset/
+	 v2.0 | 20110126
+	 License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+em,
+img,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+details,
+embed,
+figure,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  /* vertical-align: baseline; */
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+figure,
+footer,
+header,
+section {
+  display: block;
+}
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: #222;
+}
+.container {
+  margin: 1.5em auto 3em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.app-title {
+  color: #4bcff9;
+  text-align: center;
+  font-size: 2em;
+}
+.img-container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  padding: 1em;
+}
+.img-container img {
+  display: none;
+  width: 100%;
+}
+.img-container img.active {
+  display: block;
+}
+.help {
+  color: #4bcff9;
+  font-size: 2em;
+  line-height: 1.35;
+  margin-top: 1em;
+  text-align: center;
+}
+.help:hover {
+  cursor: pointer;
+}
+.footer {
+  background: #4bcff9;
+  padding: 2em 1em;
+  text-align: center;
+  height: 3vw;
+}
+.keys {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em 0 0;
+  justify-content: center;
+}
+.keys .key {
+  align-items: center;
+  border: 3px solid #4bcff9;
+  background: rgba(0, 0, 0, 0.4);
+  color: #4bcff9;
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.07s;
+  margin: 0.5em;
+  height: 3em;
+  width: 3em;
+}
+.keys .key:hover {
+  cursor: pointer;
+}
+.keys .key.playing {
+  transform: scale(1.2);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
+}

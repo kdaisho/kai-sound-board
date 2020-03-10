@@ -1,0 +1,88 @@
+@import "partials/reset";
+@primaryColor: #4bcff9;
+@accentColor: #ffc600;
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #222;
+}
+
+.container {
+    margin: 1.5em auto 3em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.app-title {
+    color: @primaryColor;
+    text-align: center;
+    font-size: 2em;
+}
+
+.img-container {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+    padding: 1em;
+    img {
+        display: none;
+        width: 100%;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.help {
+    color: @primaryColor;
+    font-size: 2em;
+    line-height: 1.35;
+    margin-top: 1em;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.footer {
+    background: @primaryColor;
+    padding: 2em 1em;
+    text-align: center;
+    height: 3vw;
+}
+
+.keys {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1em 0 0;
+    justify-content: center;
+
+    .key {
+        align-items: center;
+        border: 3px solid @primaryColor;
+        background: rgba(0, 0, 0, 0.4);
+        color: @primaryColor;
+        display: flex;
+        font-size: 1.5em;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.07s;
+        margin: 0.5em;
+        height: 3em;
+        width: 3em;
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.playing {
+            transform: scale(1.2);
+            border-color: @accentColor;
+            box-shadow: 0 0 10px @accentColor;
+        }
+    }
+}
