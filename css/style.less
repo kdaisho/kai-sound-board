@@ -3,18 +3,22 @@
 @accentColor: #ffc600;
 
 body * {
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background: #222;
+    position: relative;
 }
 
 .container {
-    margin: 1.5em auto 3em;
+    margin: 1.5em auto 0;
     display: flex;
     flex-flow: column wrap;
+    min-height: 95vh;
     justify-content: space-around;
+    padding-bottom: 3em;
 }
 
 .app-title {
@@ -25,7 +29,7 @@ body {
 
 .img-container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 900px;
     width: 100%;
     padding: 1em;
     img {
@@ -50,10 +54,16 @@ body {
 }
 
 .footer {
+    align-items: center;
     background: @primaryColor;
-    padding: 2em 1em;
-    text-align: center;
+    bottom: -3em;
+    display: flex;
     height: 3vw;
+    justify-content: center;
+    padding: 2em 1em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
 .keys {
