@@ -1,5 +1,11 @@
 "use strict";
 
+init()
+
+function init() {
+  setCopyrightYear()
+}
+
 function playSound(event) {
     const dataKey =
         event.type === "keydown" ? event.keyCode : event.target.dataset.key;
@@ -32,6 +38,12 @@ function hideAllPicture() {
 function removeTransition(event) {
     if (event.propertyName !== "transform") return;
     this.classList.remove("playing");
+}
+
+function setCopyrightYear() {
+  const d = new Date()
+  const year = d.getFullYear()
+  document.getElementById("copyright-year").innerText = year
 }
 
 const keys = document.querySelectorAll(".key");
